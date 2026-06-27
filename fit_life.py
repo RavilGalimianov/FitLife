@@ -38,10 +38,10 @@ bmi = round((user_weight / (user_height**2)), 1)
 water_mliters = user_weight * WATER_PER_KG
 water_liters = water_mliters / ML_IN_LITER
 
-
+formatted_name = user_name.capitalize()
 print(
-    f"Отчет для пользователя: {user_name.capitalize()} ({user_age} л.)\n"
+    f"Отчет для пользователя: {formatted_name} ({user_age} л.)\n"
     f"Твой Индекс Массы Тела:{bmi}\n"
     f"Рекомендуемая норма воды: {water_liters:.1f} л. в день\n\n"
-    f"Расчет окончен. Будьте здоровы!"
+    f"Расчет окончен. Будьте здоровы!",
 )
