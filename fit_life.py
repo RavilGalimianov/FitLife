@@ -5,9 +5,10 @@ ML_IN_LITER = 1000
 
 
 def main():
+    """Функция для расчета данных пользователя"""
     user_name = input("Здравствуйте, Введите Ваше Имя:")
     formatted_name = user_name.capitalize()
-    
+
     # проверка на ошибку ввода пользователя строки вместо числа
     while True:
         try:
@@ -19,7 +20,8 @@ def main():
     # проверка на ошибку ввода пользователя строки вместо числа
     while True:
         try:
-            user_weight = float(input("Введите Ваш вес(в кг):").replace(",", '.'))
+            user_weight_input = input("Введите Ваш вес(в кг):")
+            user_weight = float(user_weight_input.replace(",", '.'))
             break
         except ValueError:
             print("Введите пожалуйста число!")
@@ -39,11 +41,26 @@ def main():
     # расчёт рекомендуемой нормы воды
     water_mliters = user_weight * WATER_PER_KG
     water_liters = water_mliters / ML_IN_LITER
-    return formatted_name, user_age, user_weight, user_height, bmi, water_liters
-
+    return (
+        formatted_name,
+        user_age,
+        user_weight,
+        user_height,
+        bmi,
+        water_liters
+    )
 
 if __name__ == "__main__":
-    formatted_name, user_age, user_weight, user_height, bmi, water_liters = main()
+    (
+        formatted_name,
+        user_age,
+        user_weight,
+        user_height,
+        bmi,
+        water_liters
+    
+    ) = main()
+
     print(
         f"Отчет для пользователя: {formatted_name} ({user_age} л.)\n"
         f"Твой Индекс Массы Тела:{bmi}\n"
