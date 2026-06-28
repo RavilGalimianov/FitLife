@@ -50,6 +50,7 @@ def main():
         water_liters
     )
 
+
 if __name__ == "__main__":
     (
         formatted_name,
@@ -57,8 +58,7 @@ if __name__ == "__main__":
         user_weight,
         user_height,
         bmi,
-        water_liters
-    
+        water_liters    
     ) = main()
 
     print(
