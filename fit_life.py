@@ -5,7 +5,7 @@ ML_IN_LITER = 1000
 
 
 def main():
-    """Функция для расчета данных пользователя"""
+    ""Функция для расчета данных пользователя""
     user_name = input("Здравствуйте, Введите Ваше Имя:")
     formatted_name = user_name.capitalize()
 
@@ -21,7 +21,7 @@ def main():
     while True:
         try:
             user_weight_input = input("Введите Ваш вес(в кг):")
-            user_weight = float(user_weight_input.replace(",", '.'))
+            user_weight = float(user_weight_input.replace(",", "."))
             break
         except ValueError:
             print("Введите пожалуйста число!")
@@ -30,7 +30,7 @@ def main():
     while True:
         try:
             promt = "Введите Ваш рост(в метрах, например, 1.75):"
-            user_height = float(input(promt).replace(",", '.'))
+            user_height = float(input(promt).replace(",", "."))
             break
         except ValueError:
             print("Введите пожалуйста число!")
